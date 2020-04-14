@@ -177,6 +177,10 @@ instance R.RandomGen TFGen where
   -- must have this range.
   genRange _ = (0, 2147483562)
   split = tfGenSplit
+#if MIN_VERSION_random(1, 2, 0)
+  genWord32 = tfGenNext
+#endif
+
 
 -- | Create a generator from a random seed.
 seedTFGen :: (Word64, Word64, Word64, Word64) -> TFGen

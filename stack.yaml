@@ -1,0 +1,13 @@
+resolver: lts-15.5
+packages:
+- .
+extra-deps:
+- github: idontgetoutmuch/random
+  commit: 02b800251f0ab5a060f049dc928e6d1220d042f4
+- github: lehins/splitmix
+  commit: bb92e025a0d0a0353e2d6369191fecec8e8c99ad
+
+flags:
+  splitmix:
+    random: false
+allow-newer: true
